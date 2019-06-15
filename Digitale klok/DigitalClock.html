@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Digitale klok</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="klok.css">
+</head>
+
+
+<body>
+        <button  type="button" id="buttonDocumentatie" onclick=" window.open('DocumentatieDigitaleKlok.pdf'); return true;" >Documentatie</button>
+        <button onclick="window.open('https://codepen.io/lynchie/pen/xobapE','_blank');"" type="button" id="buttonSource">Source Code</button>
+<div id="time"></div>
+
+
+<script>
+const getTime = () => {
+    const date = new Date();
+    let hours = String(date.getHours()).padStart(2, '0');
+    let minutes = String(date.getMinutes()).padStart(2, '0');
+    let seconds = String(date.getSeconds()).padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+const init = () =>{
+    setInterval(() => {
+        document.getElementById('time').innerHTML = getTime();
+    }
+    ,1000);
+};
+
+init();
+</script>
+
+</body>

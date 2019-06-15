@@ -1,0 +1,37 @@
+body{
+    color:black;
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+#time{
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    
+    
+}
+
+#buttonDocumentatie{
+    width: 300px;
+    height: 40px;
+    position:absolute;
+    display: inline-block;
+    left:50px;
+    margin-top: 800px;
+}
+#buttonSource{
+     width: 300px;
+     height: 40px;
+     position:absolute;
+     display: inline-block;
+     left:380px;
+     margin-top: 800px;
+}
+
+button:hover{
+    background-color:yellow;
+}
