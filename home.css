@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+html{
+    height: 100%;
+
+}
+body{
+    background-color:black;
+    color:white;
+    min-height: 100%;
+
+}
+
+.prt_menu_wrapper {
+    text-align: center;
+}
+
+
+.prt_menu_wrapper a {
+    position: absolute;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0px auto;
+    z-index: 1;
+    font-weight: 500;
+    letter-spacing: 10px;
+    cursor: pointer;
+ 
+    
+    
+}
+
+.prt_menu_wrapper a.prt_top {
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    width: 100px;
+}
+
+.prt_menu_wrapper a.prt_right {
+    top: 50%;
+    right: 0px;
+    transform: rotateZ(90deg);
+    margin-top: -15px;
+}
+
+.prt_menu_wrapper a.prt_bottom {
+    bottom: 45px;
+    left: 0px;
+    right: 0px;
+    width: 150px;
+
+}
+
+.prt_menu_wrapper a.prt_left {
+    top: 50%;
+    left: -15px;
+    transform: rotateZ(-90deg);
+    margin-top: -15px;
+}
+
+.prt_menu_wrapper a.selfie {
+  top: 83%;
+  left: -3%;
+  transform: rotateZ(60deg);
+ 
+}
+
+.prt_menu_wrapper a.sprintX {
+  top: 88%;
+  right: 0%;
+  transform: rotateZ(310deg);
+}
+
+
+a:hover {
+    color:#fde100;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.text-naam {
+    width: 100%;
+    text-align: center;
+    margin: 10% 0;
+}
+
+
+
+/* The Overlay (background) */
+.overlay {
+  
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgb(0, 0, 0); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.6s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+
+  /* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color:grey;
+    
+  }
+
+  .closebtn:hover{
+      color:#fde100;
+  }
+
+ 
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+  .overlay-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:black;
+    padding: 10px;
+    grid-column-gap: 50px;
+    grid-row-gap:50px;
+    display: block;
+  	width: 100%;
+  	text-decoration: none;
+  	margin: 1em 0;
+    cursor: pointer;
+  }
+
+  .overlay-content h1{
+    position: absolute;
+    bottom: 500px;
+    left: 10px;
+    font-size: 60px;
+    border-bottom: 5px solid red;
+  }
+
+  
+
+  /* The Overlay UEX (background) */
+.overlay1 {
+     
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgb(0, 0, 0); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.6s; /* 0.6+ second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+ 
+
+/* Position the content inside the overlay */
+.overlay1-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+
+  /* Position the close button (top right corner) */
+.overlay1 .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color:grey;
+    
+  }
+
+  .closebtn:hover{
+      color:#fde100;
+  }
+
+   /* The Overlay DEV (background) */
+.overlay2 {
+     
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgb(0, 0, 0); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.6s; /* 0.6+ second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+
+/* Position the content inside the overlay */
+.overlay2-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* Position the close button (top right corner) */
+.overlay2 .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color:grey;
+  
+}
+
+   /* The Overlay PTM (background) */
+   .overlay3 {
+     
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgb(0, 0, 0); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.6s; /* 0.6+ second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  
+  
+  /* Position the content inside the overlay */
+  .overlay3-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay3 .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color:grey;
+    
+  }
+
+.closebtn:hover{
+    color:#fde100;
+}
+
+ 
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+  .overlay1-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:black;
+    padding: 10px;
+    grid-column-gap: 50px;
+    grid-row-gap:50px;
+    display: block;
+	  width: 100%;
+	  text-decoration: none;
+	  margin: 1em 0;
+    cursor: pointer;
+  }
+
+  .overlay1-content h1{
+    position: absolute;
+    bottom: 500px;
+    left: 10px;
+    font-size: 60px;
+    border-bottom: 5px solid red;
+  }
+.xop-section {
+    font-family: 'Maven Pro', sans-serif;
+	  font-weight: 500;
+	  font-size: 1.6rem;
+	  line-height: 1.3;
+    margin: 0 0 4em;
+}
+
+.project {
+    display: block;
+	  width: 100%;
+	  text-decoration: none;
+  	margin: 1em 0;
+    
+}
+
+.project figure .open  {
+  background-color:gray; 
+  border: none;
+  color:#fde100;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline;
+  width: 263px;
+  margin-top:14px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  -webkit-transition-duration: 0.8s; 
+  transition-duration: 0.8s;
+}
+.project figure .open:hover{
+  background-color:#fde100; 
+  color: white;
+  cursor: pointer;
+}
+
+.project figure .openopdracht  {
+  background-color:gray; 
+  border: none;
+  color:#fde100;
+  padding: 10px 10px;
+  display: inline;
+  width: 263px;
+  margin-top:4px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  -webkit-transition-duration: 0.8s; 
+  transition-duration: 0.8s;
+  cursor: pointer;
+  
+}
+
+.project figure .openopdracht:hover{
+  background-color:#fde100; 
+  color: white;
+}
+
+.project figure img  {
+    width: 100%;
+	  display: block;
+	  object-fit: cover;
+	  height: 300px;
+}
+
+
+.project figcaption {
+    
+	padding: 1em;
+	background: #5f5e5c;
+	color: #fff;
+}
+.project h3 {
+   
+	color: white;
+	margin: 0;
+}
+.cta {
+    
+	margin: .3em 0;
+}
+.cta:after {
+    
+	display: inline-flex;
+	margin: 0 0 .3em .3em;
+}
+
+@media screen and (min-width: 960px) {
+	.xop-wrapper {
+        
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.xop-container {
+        
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 1em;
+    }
+    .project{
+       
+        width: 100%;
+        height: 300px;
+        text-decoration: none;
+        margin: 0;
+    }
+    .project figure{
+       
+        position: relative;
+        overflow: hidden;
+    }
+    .project figure img{
+        
+        position: relative;
+        z-index: 10;
+        transition: transform 0.6s;
+    }
+    .project figure:hover img{
+        
+        transform: translateY(-100px);
+    }
+    .project figcaption{
+       
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+        height: 90px;
+        width: 100%;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    z-index: 999; /* Sit on top */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    z-index: 999;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    font-size: 15px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #fde100;
+    width: 85%;
+  }
+
+  .modal-content h3 {
+    color: black;
+    
+  }
+ 
+
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:#fde100;
+    text-decoration: none;
+    cursor: pointer;
+  }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Steen, Papier - Schaar.</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sps.css">
+    
+</head>
+
+<body>
+        <button  type="button" id="buttonDocumentatie" onclick=" window.open('DocumentatieRPS.pdf'); return true;">Documentatie</button>
+        <button onclick="window.open('https://codepen.io/lynchie/pen/MMYPee','_blank');"" type="button" id="buttonSource">Source Code</button>
+
+
+<div class="container">
+    <h1>Rock, Paper, Siccors</h1>
+    <h3>Instructie:</h3>
+    <p>Om te spelen druk: "R", "S" of "P" op je toetsenbord.
+    </p>
+
+    <div class="player">
+        <div class="userchoice Rock"></div>
+        <p>Speler 1</p>
+    </div>
+
+    <div class="player">
+        <div class="computerchoice Rock"></div>
+            <p>Computer</p>
+    </div>
+    
+    <div class="result"></div>
+
+    <button class="startbtn">Speel</button>
+
+</div>
+
+<script>
+
+var user = document.querySelector('.userchoice'),
+ computer = document.querySelector('.computerchoice'),
+ startbtn = document.querySelector('.startbtn'),
+ result = document.querySelector('.result'),
+ userchoice,
+ winStates = { Rock: 'Scissors', Paper: 'Rock', Scissors: 'Paper'};
+
+
+ startbtn.addEventListener('click', function(){
+     this.disabled = true;
+     result.innerHTML = '';
+     user.className = "userchoice Rock count-in";
+     computer.className = "computerchoice Rock count-in"
+ });
+
+ document.addEventListener('keydown', function(event){
+     if(event.keyCode === 82){
+         userchoice = 'Rock';
+     } else if (event.keyCode === 80){
+         userchoice = 'Paper';
+     } else{
+         userchoice = 'Scissors';
+     }
+ })
+
+ document.addEventListener('animationend', function(){
+    if (!userchoice) { userchoice = getRandomChoice(); }
+    startbtn.disabled = false;
+    var computerchoice = getRandomChoice();
+    user.className ="userchoice " + userchoice;
+    computer.className = "computerchoice " + computerchoice;
+    result.innerHTML = getWinner(userchoice, computerchoice);
+    userchoice = '';
+ });
+
+ function getRandomChoice(){
+     return Object.keys(winStates)[Math.floor(Math.random() * 3)];
+ }
+
+ function getWinner(userchoice, computerchoice){
+     if (userchoice === computerchoice){
+         return "Gelijkspel!";
+     } else if ( userchoice === winStates[computerchoice] ){
+         return "Computer Wint! " + computerchoice + " verslaat " + userchoice;
+     }
+     return "Jij wint! " + userchoice + " verslaat " + computerchoice;
+
+     
+    }
+ 
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

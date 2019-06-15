@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Temprature Converter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="convert.css">
+</head>
+<body>
+
+        <button  type="button" id="buttonDocumentatie" onclick=" window.open('DocumentatieTempConv.pdf'); return true;" >Documentatie</button>
+        <button onclick="window.open('https://codepen.io/lynchie/pen/MMYPKe','_blank');" type="button" id="buttonSource">Source Code</button>
+
+<div id="temp">
+    <div class="input-field">
+       <input id="celcius" type="number">
+       <label for="celcius">Celcius</label>
+    </div>
+    <div class="input-field">
+        <input id="farenheit" type="number">
+        <label for="farenheit">Farenheit</label>
+    </div>
+</div>
+
+
+
+<script>
+const celcius = document.getElementById('celcius');
+const farenheit = document.getElementById('farenheit');
+
+const updateFarenheit = () =>{
+    farenheit.value = parseFloat(celcius.value * 9 / 5) + 32;
+
+};
+
+const updateCelcius = () =>{
+    celcius.value = parseFloat((farenheit.value - 32) * 5 / 9).toFixed(2);
+
+};
+
+celcius.addEventListener('input', updateFarenheit);
+farenheit.addEventListener('input', updateCelcius);
+
+
+</script>
+
+</body>

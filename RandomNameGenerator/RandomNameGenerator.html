@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Random naam generator</title>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="random.css">
+</head>
+
+
+<body>
+        <button  type="button" id="buttonDocumentatie" onclick=" window.open('DocumentatieRNG.pdf'); return true;" >Documentatie</button>
+        <button onclick="window.open('https://codepen.io/lynchie/pen/GbgYKY','_blank');" type="button" id="buttonSource">Source Code</button>
+
+<div class="container"></div>
+<h1>Genereer een naam.</h1>
+
+<button class="btn btn-primary" id="gnr">Genereer naam</button>
+<div id="rnd-name"></div>
+
+</div>
+
+
+<script>
+    //Jongens namen
+const firstNames = ["Klaas", "Kees", "Erik", "Bob", "Paul",
+"Joris", "Jurre", "Peter", "Willem", "Tijn", "Siem", "Rens"];
+    //Achter namen
+const secondNames = ["de Jong", "Jansen", "Bakker", "Mijer", 
+"de Groot", "Bos", "Peters", "van Leeuwen"];
+   
+const getRandomNumber = (max) => Math.floor(Math.random() * max);
+   
+   
+    //Random generator 
+const getRandomName = () => 
+ `${ firstNames[getRandomNumber (firstNames.length)]} 
+ ${ secondNames[getRandomNumber(secondNames.length)]}`;
+
+   const setRandomName = () => {
+   document.getElementById('rnd-name').innerText = getRandomName();
+   }
+
+   document.getElementById('gnr')
+   .addEventListener('click', setRandomName);
+
+  setRandomName();
+</script>
+
+</body>

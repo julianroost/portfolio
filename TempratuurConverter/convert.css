@@ -1,0 +1,50 @@
+body{
+    background-color:darkslategrey;
+}
+
+
+
+#temp{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    margin: 4rem auto;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.input-field{
+ margin: 0 2rem;
+ flex: 1;
+ text-align: center;
+}
+
+.input-field input{
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+#buttonDocumentatie{
+    width: 300px;
+    height: 40px;
+    position:absolute;
+    display: inline-block;
+    left:50px;
+    margin-top: 800px;
+}
+#buttonSource{
+     width: 300px;
+     height: 40px;
+     position:absolute;
+     display: inline-block;
+     left:380px;
+     margin-top: 800px;
+}
+
+button:hover{
+    background-color:yellow;
+}

@@ -1,0 +1,32 @@
+body{
+    background-color:black;
+    color:yellow;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+#rnd-name {
+    margin: 2rem 0;
+}
+
+#buttonDocumentatie{
+    width: 300px;
+    height: 40px;
+    position:absolute;
+    display: inline-block;
+    left:50px;
+    margin-top: 800px;
+}
+#buttonSource{
+     width: 300px;
+     height: 40px;
+     position:absolute;
+     display: inline-block;
+     left:380px;
+     margin-top: 800px;
+}
+
+button:hover{
+    background-color:yellow;
+}
